@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Щоденні Новини</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container-fluid top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="top-info">
+        <span><i class="far fa-calendar-alt me-1"></i> <time id="current-date" datetime=""></time></span>
+        <span class="ms-3"><i class="fas fa-cloud-sun me-1"></i> Вінниця +8°C</span>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="container-fluid header-main">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <a href="#" class="logo text-decoration-none">Щоденні <span>Новини</span></a>
+      <div class="ad-banner mt-3 mt-md-0 d-none d-md-flex" title="Натисни — і нічого не станеться">Рекламний банер 728×90</div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Перемкнути навігацію">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Світ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-photo="images/popup-politics.jpeg" data-title="Політика">Політика</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ігри</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-photo="images/popup-auto.jpeg" data-title="Авто">Авто</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-photo="images/popup-moto.jpeg" data-title="Мото">Мото</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Технології</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Пошук..." aria-label="Пошук">
+          <button class="btn btn-outline-primary" type="submit">Пошук</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid news-ticker">
+    <div class="container d-flex align-items-center">
+      <span class="ticker-label">ТЕРМІНОВО</span>
+      <div class="ticker-track"><div class="ticker-move">
+        <span>Геймер вирішив пройти гру на 100% до ранку — ранок виявився тижнем</span>
+        <span>Мотоцикліст відкрив сезон у жовтні, а сніг теж відкрив сезон</span>
+        <span>Ворожий «мопед» знову не долетів: ППО дякує за чергову мішень</span>
+        <span>Автомобіліст пройшов техогляд з першого разу — свідки досі в шоці</span>
+        <span>Новий патч виправив три баги й додав п’ять нових, розробники в нормі</span>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row g-4">
+
+      <div class="col-12 col-lg-8">
+        <div class="featured-article">
+          <img src="images/hero.jpg" class="featured-img" alt="Українська ППО" title="Натисни мене ;)"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <p class="photo-credit">Фото: Щоденні Новини</p>
+          <div class="featured-content">
+            <span class="card-category">Головні події</span>
+            <h2 class="featured-title">Мопеди не долетіли: ППО знову виконала план із перевиконанням</h2>
+            <p class="featured-text">Українська ППО знову збила більшість ворожих «мопедів», і до цілей вони не дісталися.</p>
+            <p class="featured-meta"><i class="far fa-clock"></i> 2 години тому | <i class="far fa-comment"></i> 48 коментарів</p>
+          </div>
+        </div>
+
+        <h4 class="section-title mb-3">Останні новини</h4>
+        <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="news-card">
+            <img src="images/game-night.jpg" class="card-img-top" alt="Гравець провів 14 годин у грі й виявив, що за вікном уже наступний день"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+            <div class="card-body">
+              <span class="card-category">Ігри</span>
+              <h5 class="card-title">Гравець провів 14 годин у грі й виявив, що за вікном уже наступний день</h5>
+              <p class="card-text">Лікарі радять іноді відходити від комп’ютера, але гравець обіцяє зробити це одразу після наступної місії.</p>
+            </div>
+            <div class="card-footer"><i class="far fa-clock"></i> 3 години тому</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="news-card">
+            <img src="images/sedan.jpg" class="card-img-top" alt="Седан із пробігом 400 тисяч кілометрів пройшов техогляд і образився"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+            <div class="card-body">
+              <span class="card-category">Авто</span>
+              <h5 class="card-title">Жигуль із пробігом 400 тисяч кілометрів пройшов техогляд і образився</h5>
+              <p class="card-text">Власник стверджує, що машина їде «на характері», а механік — що на скотчі та божому слові.</p>
+            </div>
+            <div class="card-footer"><i class="far fa-clock"></i> 5 годин тому</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="news-card">
+            <img src="images/moto-ride.jpg" class="card-img-top" alt="Мотоцикліст відкрив сезон у жовтні: холод теж не підвів"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+            <div class="card-body">
+              <span class="card-category">Мото</span>
+              <h5 class="card-title">Мотоцикліст відкрив сезон у жовтні: холод теж не підвів</h5>
+              <p class="card-text">Любитель двох коліс запевняє, що тепла куртка — це лише психологічна підтримка.</p>
+            </div>
+            <div class="card-footer"><i class="far fa-clock"></i> 6 годин тому</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="news-card">
+            <img src="images/drone-tech.jpg" class="card-img-top" alt="Інженери випробували дрон-перехоплювач: мопеди скаржаться, що це нечесно"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+            <div class="card-body">
+              <span class="card-category">Технології</span>
+              <h5 class="card-title">Інженери випробували дрон-перехоплювач: мопеди скаржаться, що це нечесно</h5>
+              <p class="card-text">Новий апарат збиває ворожі дрони швидше, ніж закипає чайник. Розробники просять не поширювати подробиць.</p>
+            </div>
+            <div class="card-footer"><i class="far fa-clock"></i> 8 годин тому</div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <div class="sidebar-section">
+          <h5 class="section-title">Популярне</h5>
+          <ul class="list-group list-group-flush ranked">
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Яке авто вибрати першокурснику: поради досвідчених гайк****ів</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Топ-5 ігор, які краще не запускати перед сесією</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Чим мотоцикл відрізняється від мопеда: коротка інструкція від холодильника</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Обережно! Нова гра з’їдає час швидше, ніж стипендію "навіть якщо її немає"</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Чому Капустянчик так сильно любить мілф?</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <div class="ad-block" title="Тут теж є секрет" data-joke="Тут могла бути ваша реклама. Або запчастини до «Жигулів».">Реклама 300×250</div>
+        </div>
+        <div class="sidebar-section">
+          <h5 class="section-title">Рубрики</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Ігри (на виживання) (30)</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Авто (не бита не крашена) (42)</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Мото (хрустіки) (18)</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Технології (для чайників) (23)</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none text-reset">Політика (не цікавлюсь) (15)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title mt-5 mb-4">Обов’язково до прочитання</h3>
+    <div class="row g-4 must-read-section">
+      <div class="col-12 col-md-6 d-flex">
+        <div class="must-read-card">
+          <img src="images/memes.jpg" class="card-img" alt="Мемний огляд тижня: найкращі жарти про ворожі «мопеди»"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <h5 class="card-title">Новина тижня: Нечипоруку відмовили в продажі "цуцика"</h5>
+            <p class="card-text">Учора на верхньому Масложирі Нечипоруку відмовили в продажі чекушки в АТБ. Йому було байдуже, адже він і так випив 2 літра прозорої завчасно.</p>
+            <div class="card-meta"><i class="far fa-clock"></i> 1 день тому</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex">
+        <div class="must-read-card">
+          <img src="images/car-test.jpg" class="card-img" alt="Тест-драйв: скільки разів треба крутнути ключ, щоб поїхати"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <h5 class="card-title">Тест-драйв: скільки разів треба перебрати мотор на "Юпітері" щоб він завівся</h5>
+            <p class="card-text">Редакція перевірила старий "Юпітер". Відповідь залежить від погоди, пори доби та настрою двигуна. А також від того чи механік пив зранку.</p>
+            <div class="card-meta"><i class="far fa-clock"></i> 1 день тому</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex">
+        <div class="must-read-card">
+          <img src="images/esports.jpg" class="card-img" alt="Кіберспортивний турнір: перемогла команда, яка вчасно вимкнула мікрофон"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <h5 class="card-title">Кіберспортивний турнір по Dota2: перемогла команда, яка вчасно вимкнула мікрофон</h5>
+            <p class="card-text">Глядачі кажуть, що найцікавіше було не у грі, а в чаті. Суддя просить не повторювати почуте. Та не повторювати дії Юри (він розбив монік)</p>
+            <div class="card-meta"><i class="far fa-clock"></i> 2 дні тому</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex">
+        <div class="must-read-card">
+          <img src="images/bikers.jpg" class="card-img" alt="Байкери зібралися на фестиваль і з’ясували, чий вихлоп гучніший"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <h5 class="card-title">Байкери зібралися на фестиваль і перевіряли, чий вихлоп гучніший</h5>
+            <p class="card-text">Сусіди теж перевірили, але міцність їх шоломів. Організатори пообіцяли тихішу програму наступного року, але за участі Примарного вершника.</p>
+            <div class="card-meta"><i class="far fa-clock"></i> 2 дні тому</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title mt-5 mb-4">Популярні новини</h3>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card position-relative">
+          <img src="images/game-new.jpg" class="card-img-top" alt="Нова гра обіцяє 100 годин контенту, а втягує на 300"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Ігри</span>
+            <h5 class="card-title"><a href="https://casinofree777.netlify.app/" class="text-reset text-decoration-none stretched-link" target="_blank" rel="noopener noreferrer">Нова гра обіцяє 100 годин контенту, а витягує на 300 тис.$</a></h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/parts.jpg" class="card-img-top" alt="Запчастини подорожчали, а нерви — безцінні"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Авто</span>
+            <h5 class="card-title">Запчастини подорожчали, а нерви — пропалиі</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/moto-gear.jpg" class="card-img-top" alt="Як одягнутися на мотосезон і не стати снігуром"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Мото</span>
+            <h5 class="card-title">Як одягнутися на мотосезон і не стати фаршом</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/phone.jpg" class="card-img-top" alt="Смартфон показує 1% заряду й працює вже годину: наука безсила"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Гаджети</span>
+            <h5 class="card-title">Смартфон показує 1% заряду й працює вже годину. Но з 100% до 20% за 5 хв</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/cyber.jpg" class="card-img-top" alt="Команда мрії програла через інтернет, і цього разу це не відмовка"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Кіберспорт</span>
+            <h5 class="card-title">Команда мрії програла через інтернет, у всьому винен Київстар</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/ppo-groups.jpg" class="card-img-top" alt="Мобільні групи ППО: як вони працюють і чому їм варто донатити"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Головні події</span>
+            <h5 class="card-title">Мобільні групи ППО у Нової Пошти: звідки гроші на ППО?</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/student-parts.jpg" class="card-img-top" alt="Студент знайшов гроші в старій куртці й купив запчастини замість їжі"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Життя</span>
+            <h5 class="card-title">Студент знайшов гроші в старій куртці й купив їжі тараканам, щоб потім було що поїсти й собі. Масонабор відкрито</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="news-card">
+          <img src="images/laptop.jpg" class="card-img-top" alt="Ноутбук у гуртожитку нагрівся до 90°C: власник каже — це опалення"
+     onerror="this.onerror=null;this.src='https://placehold.co/800x400/e9ecef/6c757d?text=%D0%A4%D0%BE%D1%82%D0%BE';">
+          <div class="card-body">
+            <span class="card-category">Техніка</span>
+            <h5 class="card-title">Ноутбук у гуртожитку нагрівся до 120°C: власник каже — це опалення, а ввечері щей гриль.</h5>
+          </div>
+          <div class="card-footer"><i class="far fa-clock"></i> 1 день тому</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title mt-5 mb-4">Стрічка новин</h3>
+    <div class="feed-box mb-5">
+      <div class="row gx-5">
+        <div class="col-12 col-md-6">
+          <div class="feed-item"><time>14:32</time><a href="#">Геймер виграв турнір, граючи однією рукою: другою їв піцу. (но це не точно)</a></div>
+          <div class="feed-item"><time>13:10</time><a href="#">Мотоцикліст проїхав кілометр на задньому колесі й пояснив, що так і було задумано. (переднє він загубив ще з дому)</a></div>
+          <div class="feed-item"><time>12:45</time><a href="#">Автосалон оголосив знижку на машини, які вже продані. (тут даже добавити немає чого)</a></div>
+          <div class="feed-item"><time>11:20</time><a href="#">Нову «безкоштовну» гру анонсували: безкоштовна лише для тих хто донатить по 100$ на день. (зажрались падли)</a></div>
+          <div class="feed-item"><time>10:05</time><a href="#">Захисники неба знову збили ворожі «мопеди». На місці уламків вже не було ні соляри ні мотора. (я б тоже так зробив)</a></div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="feed-item"><time>09:40</time><a href="#">Гурток робототехніки зібрав дрон, що приносить піцу: вона дісталася Тичуку. (плати перегоріли)</a></div>
+          <div class="feed-item"><time>09:15</time><a href="#">Мотоцикл завівся з першого разу, власник досі не вірить. (я б тоже не повірив)</a></div>
+          <div class="feed-item"><time>08:30</time><a href="#">Студенти створили застосунок для пошуку вихователя по гуртожитку. (він їм не допоможе)</a></div>
+          <div class="feed-item"><time>08:00</time><a href="#">Розробники обіцяли патч «на днях»: «на днях» триває 4 роки. (обіцяного тридцять літ і три роки чекають)</a></div>
+          <div class="feed-item"><time>07:30</time><a href="#">Кіт в автосервісі отримав звання «смотрящий за проісходящим» (тепер від роботи ніхто не відлинює)</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h5>Про нас</h5>
+          <p>«Щоденні Новини» — навчальний новинний сайт про ігри, авто, мото та життя студентів, де серйозні новини живуть поруч із жартами.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5>Швидкі посилання</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Політика конфіденційності</a></li>
+            <li><a href="#">Умови використання</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="#">Карта гаражів</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5>Підписка на розсилку</h5>
+          <p>Отримуйте найважливіші новини (і мемів теж) просто на пошту.</p>
+          <form>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Ваш email" aria-label="Ваш email">
+              <button class="btn btn-primary" type="button">Підписатися</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center copyright">&copy; 2026 Щоденні Новини. Усі права захищено. Новини вигадані.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Спливаюче фото для пунктів меню (Політика, Авто, Мото) -->
+  <div class="modal fade photo-modal" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title section-title" id="photoModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img src="" id="photoModalImg" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script>
+    function updateCurrentDate() {
+      const now = new Date();
+      const dateElement = document.getElementById('current-date');
+
+      dateElement.textContent = new Intl.DateTimeFormat('uk-UA', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'Europe/Kyiv'
+      }).format(now);
+
+      dateElement.dateTime = new Intl.DateTimeFormat('en-CA', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        timeZone: 'Europe/Kyiv'
+      }).format(now);
+    }
+
+    updateCurrentDate();
+    setInterval(updateCurrentDate, 60 * 1000);
+  </script>
+  <script>
+    // Підставляє фото й заголовок з data-атрибутів кнопки, на яку натиснули
+    document.getElementById('photoModal').addEventListener('show.bs.modal', function (event) {
+      var link = event.relatedTarget;
+      document.getElementById('photoModalImg').src = link.getAttribute('data-photo');
+      document.getElementById('photoModalImg').alt = link.getAttribute('data-title');
+      document.getElementById('photoModalLabel').textContent = link.getAttribute('data-title');
+    });
+  </script>
+</body>
+</html>
